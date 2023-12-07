@@ -1,0 +1,12 @@
+<template>
+    <div id="app"></div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+</script>
+
+<style scoped>
+
+</style>
