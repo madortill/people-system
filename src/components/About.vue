@@ -1,10 +1,10 @@
 <template>
     <div id="about">
-        <!-- <img class="icon" src="@/assets/aboutIcon.svg" @click="showAbout"> -->
-        <div class="all">
-            <div class="container">
+        <img class="icon" src="@/assets/media/aboutIcon.svg" @click="showAbout">
+        <!-- <div class="all"> -->
+            <div v-show="show" class="container">
                 <div class="text">
-                    <!-- <img class="close" src="@/assets/closeIcon.svg" @click="closeAbout"> -->
+                    <img class="close" src="@/assets/media/closeIcon.svg" @click="closeAbout">
                     <div class="container-titles">
                         <div> ראש מדור טי"ל</div>
                         <div> רס"ם שלומי אוגרן</div>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
   </template>
   
@@ -63,10 +63,6 @@
   
   <style scoped>
   
-  #about {
-    direction: rtl;
-  }
-  
   .icon {
     width:5vw;
     height: 5vh;
@@ -88,7 +84,7 @@
     position: absolute;
     width: 30vw;
     height: 70vh;
-    background-color: white;
+    background-color: lightblue;
     opacity: 0.9;
     border-radius: 10%;
     z-index: 5;
@@ -100,8 +96,9 @@
   }
   
   .container {
+    /* margin-top: 30%; */
     width: 100%;
-    height: 100%;
+    height: 98vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -114,9 +111,12 @@
     height: 3.5vh;
     position: relative;
     left: -1vw;
+    cursor: pointer;
   }
   
   /* .all {
-    position: absolute;
+    margin-top: 30%;
+    width: 100%;
+    height: 100%;
   } */
   </style>

@@ -1,19 +1,21 @@
 <template>
     <div id="app">
-        <!-- <img class="iconAbout" src="@/assets/media/aboutIcon.svg" @click="showAbout"> -->
-        <about v-if="showAbout"></about>
-        <openScreen @showAbout="showAbout"></openScreen>
+        <about></about>
+        <openScreen v-if="numPage===1" @nextPage="changePage"></openScreen>
+        <Main v-if="numPage===2"></Main>
+
     </div>
 </template>
 
 <script>
 import About from './components/About.vue'
+import Main from './components/Main.vue'
 import OpenScreen from './components/OpenScreen.vue'
 export default {
-  components: {About, OpenScreen},
+  components: {About, OpenScreen, Main},
   data() {
     return {
-        showAbout: false,
+        numPage: 1
     }
   },
   mounted () {
@@ -21,9 +23,9 @@ export default {
 
   },
   methods: {
-    showAbout() {
-        this.showAbout = true
-    }
+    changePage() {
+            this.numPage +=1;
+        },
   }
 }
 </script>
@@ -32,12 +34,4 @@ export default {
 #app {
     direction: rtl;
 }
-
-.iconAbout {
-    width:5vw;
-    height: 5vh;
-    position: fixed;
-    margin-top: 1vh;
-    margin-left: 95vw;
-  }
 </style>
