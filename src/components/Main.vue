@@ -1,119 +1,81 @@
 <template>
     <div id="main">
-        <div>
+        <!-- <div> -->
             <div v-if="numStage===1" class="container1">
               <div>
                 <div class="img1"></div>
                 <div @click="nextStage()" v-if="showUser" class="user">
                     <p>{{name}}</p>
                 </div>
-                <input class="input1" type="text" v-model="name"  @keydown.enter="inputFun(1)"/>
+                <input class="input1" type="text" v-model="name"  @keydown.enter="inputFun()"/>
               </div>
               <div class="img2"></div>
             </div>
-
-            <div v-if="numStage===2" class="container2">
-              <div>
-                <div class="img1">
-                  <div class="user">
-                    <p>{{name}}</p>
-                  </div>
-                </div>
-                <input class="input1" type="text" v-model="name"  @keydown.enter="findUser"/>
-              </div>
-              <div class="partIn2">
-              <img class="img3" src="@/assets/Media/5.png" alt="">
-              <img class="img4" src="@/assets/Media/3.png" alt="">
-              <div class="plus" @click="request()"></div>
-              <img  v-if="showRequest" class="img6" src="@/assets/Media/19.png" alt="">
-              <div  v-if="showRequest" class="createRequest" @click="toShow3()"></div>
-              <img class="img5" src="@/assets/Media/2.png" alt="">
-            </div>
-            <img v-if="show3" class="img7" src="@/assets/Media/6.png" alt="">
-            <input v-if="show3" class="input2" type="text" value="בחר בקשה" v-model="request" @keydown.ס="inputFun(2)">
-            <img v-if="show4" class="img8" src="@/assets/Media/7.png" alt="">
-            <div v-if="show4" class="chooseRequest" @click="nextStage()" ></div>
-            </div>
-
-            <div v-if="numStage===3" class="container3">
-              <!-- <img class="img9" src="@/assets/Media/8.png" alt=""> -->
-              <div class="img9">
-                <select @click.once="form(1)" class="select1" name="cars">
-                  <option value="volvo">שדה חובה</option>
-                  <option  value="saab">רגילה/ הכרה</option>
-                </select>
-                <select @click.once="form(2)" class="select2" name="cars">
-                  <option value="volvo">שדה חובה</option>
-                  <option value="saab">רגיל</option>
-                </select>
-                <div v-if="show5" @click="form(3)" class="sum">סכום תווים עבור בקשה
-                  <input v-model="sum" type="number">
-                </div>
-                <div v-if="show5" @click="form(4)" class="time">משך זכאות בחודשים
-                  <input v-model="time" type="number">
-                </div>
-              </div>
-              <img class="saveButton" v-if="show6" src="@/assets/Media/shamur.png" alt="">
-              <img class="saveButton" v-if="!show6" src="@/assets/Media/save.png" alt="">
-            </div>
-        </div>
+            <stage2 v-if="numStage===2 || numStage===4 || numStage===5 || numStage===5" @nextStage="nextStage" :numStage="numStage" :name="name"></stage2>
+            <stage3 v-show="numStage===3 || numStage===6" @nextStage="nextStage" :numStage="numStage" ></stage3>
+            <Stage6 v-if="numStage===5" @nextStage="nextStage"></Stage6>
+        <!-- </div> -->
         <div></div>
     </div>
 </template>
 
 <script>
+import Stage2 from './Stage2.vue'
+import Stage3 from './stage3.vue'
+import Stage6 from './Stage6.vue'
   export default {
+    components: {Stage2, Stage3, Stage6},
     name: "main",
     data() {
       return {
         showUser: false,
-        numStage: 1,
+        numStage: 3,
         numMis: 0,
         showRequest: false,
         show3: false,
         show4: false,
         show5: false,
         show6: true,
-        numTrueForm: 0
+        numTrueForm: 0,
+        saved: false
       }
     },
     methods: {
-      inputFun(num) {
-        if(num===1) {
+      inputFun() {
           if (this.name !== undefined){
               this.showUser = true;
           }
-        }
-        else if(num===2) {
-              this.show4 = true;
-              console.log("ס");
-        }
         },
         nextStage() {
           this.numStage += 1;
+          // if (this.numStage >= 4) {
+          //   this.saved = false;
+          //   console.log(this.saved);
+          // }
           console.log(this.numStage);
         },
-        request() {
-          this.showRequest = true;
-        },
-        toShow3() {
-          this.show3 = true;
-        },
-        form(num) {
-          console.log(num);
-          console.log(this.sum);
-          console.log(this.time);
-          this.numTrueForm+=1;
-          console.log(this.numTrueForm);
-          if(this.numTrueForm === 2){
-            this.show5 = true;
-            if (this.sum !== undefined && this.time !== undefined && this.sum > 299) {
-              console.log(this.show6);
-              this.show6 = false;
-            }
-          }
-        }
-
+        // requestShow() {
+        //   this.showRequest = true;
+        // },
+        // toShow3() {
+        //   this.show3 = true;
+        //   this.showRequest = false;
+        // },
+        // form() {
+        //   this.numTrueForm+=1;
+        //   if(this.numTrueForm >= 4){
+        //     this.show5 = true;
+        //     if (this.sum !== undefined && this.time !== undefined && this.sum > 299) {
+        //       this.show6 = false;
+        //     }
+        //   }
+        // },
+        // saveForm() {
+        //   this.saved = true;
+        //   setTimeout(() => {
+        //         this.nextStage();
+        //     }, 1500);
+        // }
     },
     computed: {
     }
@@ -167,7 +129,7 @@
   right: 1.5vh;
 } 
 
-p {
+.user p {
   color: #005ce6;
   position: relative;
   top: 25%;
@@ -292,4 +254,103 @@ p {
   right: 48vw;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.3vw;
+  height: 1.5vh;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5vh;
+  width: 1vw;
+  right: 0vw;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-2.3vh);
+  -ms-transform: translateX(-2.3vh);
+  transform: translateX(-2.3vh);
+}
+
+.slider.round {
+  border-radius: 2vh;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch1 {
+  position: absolute;
+  top: 38.5vh;
+  right: 53.4vw;
+}
+.switch2 {
+  position: absolute;
+  top: 45vh;
+  right: 29.3vw;
+}
+
+.containerDone {
+  width: 98vw;
+  height: 98vh;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerDone img {
+  width: 20vw;
+  height: 25vh;
+}
+
+.darkScreen { 
+  position: absolute;
+  width: 98vw;
+  height: 98vh;
+  background-color: black;
+  opacity: 65%;
+}
+
+/* .termsService{
+  width: 27vw;
+  height: 13vh;
+  position: fixed;
+  bottom: 45vh;
+  right: 70vw;
+} */
 </style>

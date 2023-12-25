@@ -3,7 +3,6 @@
         <about></about>
         <openScreen v-if="numPage===1" @nextPage="changePage"></openScreen>
         <Main v-if="numPage===2"></Main>
-
     </div>
 </template>
 
