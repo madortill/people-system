@@ -36,7 +36,7 @@ import Stage3 from './Stage3.vue'
     data() {
       return {
         showUser: false,
-        numStage: 10,
+        numStage: 1,
         name: "",
         show1: false,
         show2: false,
