@@ -39,6 +39,7 @@ export default {
         showRequest: false,
         show3: false,
         show4: false,
+        request: ""
       }
     },
     methods: {
@@ -85,11 +86,11 @@ export default {
 .input1 {
   position: relative;
   bottom:88vh;
-  right: 0.2vw;
+  right: 0.1vw;
   background-color: #8585ad;
-  border-radius: 20%;
+  border-radius: 5vh;
   border-color: #8585ad;
-  width: 13vw;
+  width: 13.5vw;
   height: 2.3vh;
 }
   .user {

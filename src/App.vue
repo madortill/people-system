@@ -2,16 +2,16 @@
     <div id="app">
         <about></about>
         <openScreen v-if="numPage===1" @nextPage="changePage"></openScreen>
-        <Main v-if="numPage===2"></Main>
+        <mainScreen v-if="numPage===2"></mainScreen>
     </div>
 </template>
 
 <script>
 import About from './components/About.vue'
-import Main from './components/Main.vue'
+import MainScreen from './components/MainScreen.vue'
 import OpenScreen from './components/OpenScreen.vue'
 export default {
-  components: {About, OpenScreen, Main},
+  components: {About, OpenScreen, MainScreen},
   data() {
     return {
         numPage: 1
