@@ -3,7 +3,7 @@
         <img class="icon" src="/aboutIcon.svg" @click="showAbout">
             <div v-show="show" class="container">
                 <div class="text">
-                    <img class="close" src="@/assets/media/closeIcon.svg" @click="closeAbout">
+                    <img class="close" src="/closeIcon.svg" @click="closeAbout">
                     <div class="container-titles">
                         <div> ראש מדור טי"ל</div>
                         <div> רס"ם שלומי אוגרן</div>
