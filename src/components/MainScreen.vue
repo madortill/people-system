@@ -6,7 +6,7 @@
                 <div @click="nextStage()" v-if="showUser" class="user">
                     <p>{{name}}</p>
                 </div>
-                <input class="input1" type="text" v-model="name"  @keydown.enter="inputFun()"/>
+                <input class="input1" type="text" v-model="name" @keydown.enter="inputFun()"/>
               </div>
               <div class="img2"></div>
               <img class="reshima" src="@/assets/Media/reshima.png" @click="open(1)">
@@ -72,7 +72,7 @@ import Stage3 from './Stage3.vue'
 
 <style scoped>
 .img1 {
-  height: 98vh;
+  height: 100vh;
   width: 20vw;
   background-image: url("@/assets/Media/39.png");
   background-size: 100% 100%;
@@ -81,7 +81,7 @@ import Stage3 from './Stage3.vue'
 }
 
 .img2 {
-  height: 98vh;
+  height: 100vh;
   width: 80vw;
   background-image: url("@/assets/Media/20.png");
   background-size: 100% 100%;
@@ -91,20 +91,21 @@ import Stage3 from './Stage3.vue'
 
 .input1 {
   position: relative;
-  bottom:88vh;
+  bottom:89vh;
   right: 0.1vw;
   background-color: #8585ad;
   border-radius: 5vh;
-  border-color: #8585ad;
+  border: none;
   width: 13.5vw;
   height: 2.3vh;
 }
 
 .container1 {
   display: flex;
-  height: 98vh;
+  height: 100vh;
   position: relative;
   top: 0vh;
+  margin: 0;
 }
 
 .user {
@@ -115,6 +116,7 @@ import Stage3 from './Stage3.vue'
   position: fixed;
   bottom: 74vh;
   right: 1.5vh;
+  cursor: pointer;
 } 
 
 .user p {
@@ -127,8 +129,9 @@ import Stage3 from './Stage3.vue'
     width: 4vw;
     height: 4vh;
     position: absolute;
-    top: 13.5vh;
-    right: 41.4vw;
+    top: 14vh;
+    right: 42vw;
+    cursor: pointer;
 }
 
 .img3 {
@@ -148,7 +151,7 @@ import Stage3 from './Stage3.vue'
 
 .open {
   background-image: url("@/assets/Media/21.png");
-  background-size: 120% 100%;
+  background-size: 100% 100%;
 }
 
 .openReason {
@@ -157,6 +160,7 @@ import Stage3 from './Stage3.vue'
     position: absolute;
     top: 35vh;
     right: 39vw;
+    cursor: pointer;
 }
 
 .img4 {
@@ -171,6 +175,7 @@ import Stage3 from './Stage3.vue'
     height: 4vh;
     position: absolute;
     top: 37vh;
+    cursor: pointer;
     right: 39vw;
 }
 

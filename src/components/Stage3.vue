@@ -129,7 +129,8 @@
     top: 38.5vh;
     right: 36.5vw;
     width: 7.5vw;
-    height: 2vh
+    height: 2vh;
+    cursor: pointer;
 }
 .select2 {
   position: absolute;
@@ -137,11 +138,13 @@
   right: 44.5vw;
   width: 7.5vw;
   height: 2vh;
+  cursor: pointer;
 }
 
 .saveButton {
   width: 5vw;
   height: 3vh;
+  cursor: pointer;
 }
 
 .sum {
@@ -162,6 +165,7 @@
   display: inline-block;
   width: 2.3vw;
   height: 1.6vh;
+  cursor: pointer;
 }
 .switch input {
   opacity: 0;
@@ -227,7 +231,7 @@ input:checked + .slider:before {
 
 .containerDone {
   width: 98vw;
-  height: 98vh;
+  height: 100vh;
   display: flex;
   position: absolute;
   justify-content: center;
@@ -253,11 +257,12 @@ input:checked + .slider:before {
   right: 34vw;
   width: 5vw;
   height: 2vh;
+  cursor: pointer;
 }
 
 .img91 {
   width: 45vw;
-  height: 98vh;
+  height: 100vh;
   background-image: url("@/assets/Media/18.png");
   background-size: 100% 100%;
 }
@@ -268,6 +273,7 @@ input:checked + .slider:before {
   right: 40vw;
   width: 6vw;
   height: 2vh;
+  cursor: pointer;
 }
 .recommen {
   width: 45vw;

@@ -131,7 +131,7 @@
   }
   .img91 {
   width: 45vw;
-  height: 98vh;
+  height: 100vh;
   background-image: url("@/assets/Media/18.png");
   background-size: 100% 100%;
 }
@@ -152,6 +152,7 @@
 }
 .document {
     right: 30vw;
+    cursor: pointer;
 }
 .butza {
     left: 27vw
@@ -159,14 +160,14 @@
 .darkScreen { 
   position: absolute;
   width: 98vw;
-  height: 98vh;
+  height: 100vh;
   background-color: black;
   opacity: 65%;
 }
 
 .containerDone {
   width: 98vw;
-  height: 98vh;
+  height: 100vh;
   display: flex;
   position: absolute;
   justify-content: center;
@@ -180,6 +181,7 @@
     position: absolute;
     right: 42vw;
     top: 67vh;
+    cursor: pointer;
 }
 .doc {
     width: 30vw;
@@ -195,11 +197,13 @@
     height: 3vh;
     position: absolute;
     top: 95.4vh;
-    right: 62.9vw
+    right: 62.9vw;
+    cursor: pointer;
 }
 
 .select {
     width: 7vw;
     height: 3vh;
+    cursor: pointer;
 }
   </style>

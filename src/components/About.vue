@@ -67,6 +67,7 @@
     position: fixed;
     margin-top: 1vh;
     margin-left: 95vw;
+    cursor: pointer;
   }
   
   .container-titles :first-child {
@@ -96,7 +97,7 @@
   .container {
     /* margin-top: 30%; */
     width: 100%;
-    height: 98vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;

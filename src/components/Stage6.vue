@@ -30,7 +30,7 @@ export default {
   #stage6 {
     position: fixed;
     width: 98vw;
-    height: 98vh;
+    height: 100vh;
     top: 1vh;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,7 @@ export default {
     height: 8vh;
     position: fixed;
     top: 34vh;
+    cursor: pointer;
     right: 15vw;
   }
   </style>

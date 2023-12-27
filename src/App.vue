@@ -29,7 +29,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
+body {
+  margin: 0;
+  overflow: hidden;
+}
 #app {
     direction: rtl;
 }

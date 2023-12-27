@@ -66,7 +66,7 @@ export default {
     display: flex;
   }
   .img1 {
-  height: 98vh;
+  height: 100vh;
   width: 20vw;
   background-image: url("@/assets/Media/39.png");
   background-size: 100% 100%;
@@ -75,7 +75,7 @@ export default {
 }
 
 .img2 {
-  height: 98vh;
+  height: 100vh;
   width: 80vw;
   background-image: url("@/assets/Media/20.png");
   background-size: 100% 100%;
@@ -85,11 +85,11 @@ export default {
 
 .input1 {
   position: relative;
-  bottom:88vh;
+  bottom:89vh;
   right: 0.1vw;
   background-color: #8585ad;
+  border: none;
   border-radius: 5vh;
-  border-color: #8585ad;
   width: 13.5vw;
   height: 2.3vh;
 }
@@ -112,7 +112,7 @@ export default {
 
 .partIn2 {
   width: 80vw;
-  height: 98vh;
+  height: 100vh;
 }
 
 /* .container2 {
@@ -139,6 +139,7 @@ export default {
   position: fixed;
   bottom: 73vh;
   right:37vw;
+  cursor: pointer;
 }
 .img6 {
   position: fixed;
@@ -151,6 +152,7 @@ export default {
   position: fixed;
   bottom: 52vh;
   right: 39vw;
+  cursor: pointer;
 }
 .img7{
   width: 95vw;
@@ -181,6 +183,7 @@ export default {
   height: 6vh;
   position: fixed;
   bottom: 73vh;
+  cursor: pointer;
   right: 22vw;
 }
 
@@ -190,5 +193,6 @@ export default {
   position: fixed;
   bottom: 45vh;
   right: 70vw;
+  cursor: pointer;
 }
   </style>
