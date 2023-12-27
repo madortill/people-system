@@ -68,6 +68,7 @@
     margin-top: 1vh;
     margin-left: 95vw;
     cursor: pointer;
+    filter: brightness(0) invert(1);
   }
   
   .container-titles :first-child {

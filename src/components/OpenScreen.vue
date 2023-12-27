@@ -29,6 +29,11 @@
   </script>
 
 <style scoped>
+@font-face {
+    font-family: "open";
+    src: url("src/assets/Open_Sans (1)/OpenSans-VariableFont_wdth,wght.ttf");
+  } 
+
 #openScreen {
     display: flex;
     flex-direction: column;
@@ -43,6 +48,7 @@
     height: 5vh;
     font-size: 1.5rem;
     position: fixed;
+    font-family: "open";
     bottom: 10vh;
     box-shadow: 7px 23px 15px -3px rgba(0,0,0,0.1);
 }
