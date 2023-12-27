@@ -1,6 +1,6 @@
 <template>
     <div id="about">
-        <img class="icon" src="@/assets/media/aboutIcon.svg" @click="showAbout">
+        <img class="icon" src="@/aboutIcon.svg" @click="showAbout">
             <div v-show="show" class="container">
                 <div class="text">
                     <img class="close" src="@/assets/media/closeIcon.svg" @click="closeAbout">
