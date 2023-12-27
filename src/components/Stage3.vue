@@ -68,7 +68,7 @@
         sum: 0,
         time:0,
         showSummary: false,
-        recommendation: "",
+        recommendation: "" ,
       }
     },
     methods: {
