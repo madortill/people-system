@@ -31,13 +31,13 @@
 <style scoped>
 @font-face {
     font-family: "open";
-    src: url("src/assets/Open_Sans (1)/OpenSans-VariableFont_wdth,wght.ttf");
+    src: url("@/assets/Open_Sans (1)/OpenSans-VariableFont_wdth,wght.ttf");
   } 
 
 #openScreen {
     display: flex;
     flex-direction: column;
-    background-image: url('src/assets/Media/beginBackground.svg');
+    background-image: url('@/assets/Media/beginBackground.svg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
